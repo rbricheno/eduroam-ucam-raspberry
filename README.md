@@ -29,7 +29,11 @@ All of the configuration that we need is stored in a file called `/etc/wpa_suppl
 
 Download the CA certificate mentioned in the prerequisites, and copy it somewhere memorable. I've copied mine (as root) to `/etc/wpa_supplicant/wireless-ca.crt`
 
-Now (as root) edit your `/etc/wpa_supplicant/wpa_supplicant.conf` file (after taking a copy of it) using your favourite text editor. The new file will contain the line `update_config=0` to prevent the GUI from attempting to modify the contents of the file. It also contains a new entry for the "eduroam" network. Once eduroam is working, take a copy of this file so you can easily restore the "eduroam" settings in future if you need to make changes to the config.
+Make a copy of `/etc/wpa_supplicant/wpa_supplicant.conf` before you start so you can restore it if something does wrong.
+
+Now (as root) edit your `/etc/wpa_supplicant/wpa_supplicant.conf` file using your favourite text editor. The updated file will contain the line `update_config=0` to prevent the GUI from attempting to modify the contents of the file. It will also contain a new entry for the "eduroam" network. Once eduroam is working, take a copy of the edited file so you can easily restore the "eduroam" settings in future if you need to make changes to the config.
+
+## wpa_supplicant.conf for eduroam in the University of Cambridge
 
 The file should look like this:
 ```
@@ -51,7 +55,7 @@ network={
         subject_match="/C=GB/ST=England/L=Cambridge/O=University of Cambridge/OU=University Information Services/CN=token.wireless.cam.ac.uk"
 }
 ```
-The lines you need to change are `identity` which should be your own eduroam identifier (containing your CRSid) and `password` which should be your network access token. You should not change the `anonymous_identity` from `_token@cam.ac.uk`.
+The lines you need to change are `identity` which should be your own eduroam identifier (containing your CRSid instead of `spqr2`) and `password` which should be your network access token from the tokens web site. You should not change the `anonymous_identity` from `_token@cam.ac.uk`.
 
 ## One weird trick
 
