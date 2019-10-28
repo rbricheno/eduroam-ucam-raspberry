@@ -63,7 +63,7 @@ This config is now correct, but there is a problem with Raspbian Buster which pr
 
 Take a copy of the file `/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant` so you can restore it if something does wrong.
 
-Now, as root, edit `/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant`.
+Now (as root) edit `/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant` using your favourite text editor.
 
 Around line 58, you should see the line:
 ```
