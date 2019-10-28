@@ -4,7 +4,7 @@ This covers [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) [Buster]
 
 ## The problem
 
-Out of the box, Raspbian Buster on the Raspberry Pi will not connect to eduroam in Cambridge. It might not be obvious how to make it connect. The eduroam network appears on the list of wireless networks but is 'greyed out' or disabled.
+Out of the box, Raspbian Buster on the Raspberry Pi will not connect to eduroam in Cambridge. It might not be obvious how to make it connect. The eduroam network appears on the list of wireless networks in the desktop GUI but is 'greyed out' or disabled.
 
 ## Prerequisites
 
