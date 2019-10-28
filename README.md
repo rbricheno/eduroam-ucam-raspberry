@@ -1,8 +1,8 @@
 # eduroam-ucam-raspberry
 
-This document covers [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) [Buster](https://www.raspberrypi.org/blog/buster-the-new-version-of-raspbian/) and the [eduroam](https://www.eduroam.org/) network provided at the [University of Cambridge](https://help.uis.cam.ac.uk/service/wi-fi).
+This covers [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) [Buster](https://www.raspberrypi.org/blog/buster-the-new-version-of-raspbian/) and the [eduroam](https://www.eduroam.org/) network provided at the [University of Cambridge](https://help.uis.cam.ac.uk/service/wi-fi).
 
-## Problem description
+## The problem
 
 Out of the box, Raspbian Buster on the Raspberry Pi will not connect to eduroam in Cambridge. It might not be obvious how to make it connect. The eduroam network appears on the list of wireless networks but is 'greyed out' or disabled.
 
