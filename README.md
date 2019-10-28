@@ -55,6 +55,8 @@ network={
 
 The lines you need to change are `identity` which should be your own eduroam identifier (containing your CRSid) and `password` which should be your network access token. You should not change the `anonymous_identity` from `_token@cam.ac.uk`.
 
+## One weird trick
+
 This config is now correct, but there is a misconfiguration of Raspbian Buster which prevents it from working. Unfortunately the easiest way to fix this is to edit one of the files which is part of Buster. Fortunately this is only a one line change and is the last step to get your eduroam working!
 
 Take a copy of the file `/lib/dhcpcd/dhcpcd-hooks/10-wpa_supplicant` so you can restore it if something does wrong.
