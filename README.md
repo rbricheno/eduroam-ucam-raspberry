@@ -8,9 +8,9 @@ Out of the box, Raspbian Buster on the Raspberry Pi will not connect to eduroam 
 
 ## Prerequisites
 
- * Clean install of Raspbian buster
+ * Clean install of Raspbian Buster
  * Decent eduroam signal (be somewhere vaguely near an access point)
- * Raspberrry Pi with a working wireless card - All Pis from version 3 onwards have built in wifi which works fine
+ * Raspberrry Pi with a working wireless card - All Pis from version 3 onwards have built in wifi which works fine. I tested this on a Pi 4 Model B.
 
 You will also need the following Cambridge-specific things:
 
