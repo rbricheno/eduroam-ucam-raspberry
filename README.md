@@ -15,7 +15,7 @@ Out of the box, Raspbian Buster will not connect to eduroam in Cambridge. It mig
 You will also need the following Cambridge-specific things:
 
 Prerequisite | Details
-----
+-------------|--------
 CRSid | You got it when you joined the University. It's your ["Common Registration Scheme Identifier"](https://www.itservices.cam.ac.uk/services/user-accounts-and-security/user-accounts-and-passwords/accounts-and-passwords/common-registration-scheme-identifiers-crsids). It probably starts with your initials then a number. It looks like "spqr2"
 eduroam identifier | derived from your crsid. It's your crsid with "@cam.ac.uk" on the end. It looks like "spqr2@cam.ac.uk"
 network access token | This is like a password, but used to access network resources. You can collect it from the [UIS Tokens Service web site](https://tokens.csx.cam.ac.uk/)
@@ -32,25 +32,25 @@ Download the CA certificate mentioned in the prerequisites, and copy it somewher
 Now (as root) modify your wpa_supplicant.conf file (after taking a copy of it). Notably, the new file contains the line "update_config=0" to prevent the GUI from attempting to modify the contents of the file. It also contains a new entry for the "eduroam" network. Once eduroam is working, take a copy of this file so you can easily restore the "eduroam" settings in future if you need to make changes to the config.
 
 The file should look like this:
+```
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=0
+country=GB
 
-> ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-> update_config=0
-> country=GB
-> 
-> network={
->         ssid="eduroam"
->         proto=RSN
->         key_mgmt=WPA-EAP
->         eap=PEAP
->         pairwise=CCMP
->         group=CCMP
->         identity="spqr2@cam.ac.uk"
->         anonymous_identity="_token@cam.ac.uk"
->         password="asdftokenqwertyu"
->         ca_cert="/etc/wpa_supplicant/wireless-ca.crt"
->         subject_match="/C=GB/ST=England/L=Cambridge/O=University of Cambridge/OU=University Information Services/CN=token.wireless.cam.ac.uk"
-> }
-
+network={
+        ssid="eduroam"
+        proto=RSN
+        key_mgmt=WPA-EAP
+        eap=PEAP
+        pairwise=CCMP
+        group=CCMP
+        identity="spqr2@cam.ac.uk"
+        anonymous_identity="_token@cam.ac.uk"
+        password="asdftokenqwertyu"
+        ca_cert="/etc/wpa_supplicant/wireless-ca.crt"
+        subject_match="/C=GB/ST=England/L=Cambridge/O=University of Cambridge/OU=University Information Services/CN=token.wireless.cam.ac.uk"
+}
+```
 (One day I might document what all of this means)
 
 The lines you need to change are "identity" should be your own eduroam identifier (containing your CRSid) and "password" should be your network access token. You should not change the "anonymous_identity" from "_token@cam.ac.uk".
