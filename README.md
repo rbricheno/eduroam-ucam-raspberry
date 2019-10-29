@@ -59,7 +59,7 @@ The lines you need to change are `identity` which should be your own eduroam ide
 
 ## One weird trick
 
-This config is now correct, but there is a problem with Raspbian Buster which prevents it from working. The easiest way to fix this is to edit one of the files which is part of Buster. This fix only applies to Raspbian Buster and is not required for earlier versions of Raspbian as far as I know.
+This config is now correct, but there is a problem with Raspbian Buster which prevents it from working. The easiest way to fix this is to edit one of the files which is part of Buster. *This fix only applies to Raspbian Buster* and is not required for earlier versions of Raspbian as far as I know.
 
 Fortunately this is only a one line change and is the last step to get your eduroam working!
 
