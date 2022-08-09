@@ -18,7 +18,7 @@ Prerequisite | Details
 -------------|--------
 CRSid | You got it when you joined the University. It's your ["Common Registration Scheme Identifier"](https://www.itservices.cam.ac.uk/services/user-accounts-and-security/user-accounts-and-passwords/accounts-and-passwords/common-registration-scheme-identifiers-crsids). It probably starts with your initials then a number. It looks like "spqr2"
 eduroam identifier | Derived from your crsid. It's your crsid with "@cam.ac.uk" on the end. It looks like "spqr2@cam.ac.uk"
-network access token | This is like a password, but used to access network resources. You can collect it from the [UIS Tokens Service web site](https://tokens.csx.cam.ac.uk/)
+network access token | This is like a password, but used to access network resources. You can collect it from the [UIS Tokens Service web site](https://tokens.uis.cam.ac.uk/)
 Cambridge root CA certificate | For the purposes of this document we will be using the Cambridge CA certificate which you can download [here ](https://help.uis.cam.ac.uk/service/wi-fi/other/wireless-ca.crt). For a better understanding of what your options are, and for information about how to verify the CA certificate, please read [the official documentation](https://help.uis.cam.ac.uk/service/wi-fi/other).
 
 ## Steps to connect
